@@ -8,9 +8,9 @@ package chapter02;
 
 // 특정 클래스파일(.java 파일)에서 public 클래스는
 // 파일명과 일치해야하고 하나만 지정할 수 있음 
-public class ExampleClass {
-	
-}
+//public class ExampleClass {
+//	
+//}
 
 class AccessModifierSub1 {
 	
@@ -23,7 +23,7 @@ class AccessModifierSub1 {
 		instance.protectedInt = 0;
 		instance.packageInt = 0;
 		// private 접근 제어자는 같은 패키지인 다른 클래스에서 접근 불가능
-		instance.privateInt = 0;
+//		instance.privateInt = 0;
 		
 	}
 	

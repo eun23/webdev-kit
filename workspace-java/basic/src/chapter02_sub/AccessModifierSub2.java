@@ -15,8 +15,8 @@ public class AccessModifierSub2 extends F_AccessModifier {
 		super.publicInt = 0;
 		super.protectedInt = 0;
 		// package, private 접근 제어자는 접근 불가능
-		super.packageInt = 0;
-		super.privateInt = 0;
+//		super.packageInt = 0;
+//		super.privateInt = 0;
 	}
 	
 }
@@ -30,9 +30,9 @@ class AccessModifier3 {
 		// public 접근 제어자는 접근 가능
 		instance.publicInt = 0;
 		// protected, package, private 접근 제어자는 접근 불가능
-		instance.protectedInt = 0;
-		instance.packageInt = 0;
-		instance.privateInt = 0;
+//		instance.protectedInt = 0;
+//		instance.packageInt = 0;
+//		instance.privateInt = 0;
 		
 	}
 	
