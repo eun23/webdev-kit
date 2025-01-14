@@ -28,4 +28,27 @@ public class UserRepositoryImplement implements UserRepository {
 		return null;
 	}
 
+	@Override
+	public void updateByNickname(String id, String nickname) {
+		for (UserEntity entity : DATABASE_LIST) {
+			if (entity.getId().equals(id))
+				entity.setNickname(nickname);
+		}
+	}
+
+	@Override
+	public void deleteById(String id) {
+		UserEntity userEntity = null;
+		for (UserEntity entity : DATABASE_LIST) {
+			if (entity.getId().equals(id))
+				userEntity = entity;
+		}
+		DATABASE_LIST.remove(userEntity);
+	}
+
+	@Override
+	public void deleteOne(UserEntity userEntity) {
+		DATABASE_LIST.remove(userEntity);
+	}
+
 }

@@ -32,4 +32,8 @@ public class UserEntity {
 		return nickname;
 	}
 
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
 }

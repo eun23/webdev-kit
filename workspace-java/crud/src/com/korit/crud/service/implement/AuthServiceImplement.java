@@ -1,5 +1,6 @@
 package com.korit.crud.service.implement;
 
+import com.korit.crud.CrudApplication;
 import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
 import com.korit.crud.entity.UserEntity;
@@ -51,6 +52,8 @@ public class AuthServiceImplement implements AuthService {
 			System.out.println("로그인에 실패했습니다.");
 			return;
 		}
+		// 로그인 정보 저장
+		CrudApplication.SESSION = id;
 		// '로그인 성공' 출력
 		System.out.println("로그인 성공");
 	}
