@@ -1,11 +1,13 @@
 package com.korit.crud;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 import com.korit.crud.controller.AuthController;
 import com.korit.crud.controller.UserController;
 import com.korit.crud.controller.implement.AuthControllerImplement;
 import com.korit.crud.controller.implement.UserControllerImplement;
+import com.korit.crud.db.MySQLConnector;
 import com.korit.crud.dto.auth.SignInRequestDto;
 import com.korit.crud.dto.auth.SignUpRequestDto;
 import com.korit.crud.dto.user.DeleteSignInUserRequestDto;
@@ -23,7 +25,9 @@ public class CrudApplication {
 
 	public static void main(String[] args) {
 
-		UserRepository userRepository = new UserRepositoryImplement();
+		Connection connection = MySQLConnector.getInstance().getConnection();
+
+		UserRepository userRepository = new UserRepositoryImplement(connection);
 		AuthService authService = new AuthServiceImplement(userRepository);
 		UserService userService = new UserServiceImplement(userRepository);
 		AuthController authController = new AuthControllerImplement(authService);
@@ -33,7 +37,7 @@ public class CrudApplication {
 
 		while (true) {
 
-			String job = SESSION == null ? "(로그인, 회원가입)" : "(정보보기, 정보수정, 정보삭제)";
+			String job = SESSION == null ? "(로그인, 회원가입)" : "(정보보기, 정보수정, 정보삭제, 게시판)";
 			System.out.print("작업 " + job + " : ");
 
 			String request = scanner.nextLine();

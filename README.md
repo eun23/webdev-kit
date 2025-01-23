@@ -34,9 +34,9 @@
 - [DBMS 및 MySQL 개요](https://www.notion.so/DBMS-MySQL-17ca00321d98800084f9f5c44cc380cf?pvs=4)
 - [MySQL 설치 및 설정](https://www.notion.so/MySQL-17ca00321d9880f4ab35c3e45645e8c5?pvs=4)
 - [SQL 기초](https://www.notion.so/SQL-17da00321d988085843cc2c2f749971a?pvs=4)
-- []()
-- []()
-- []()
+- [MySQL의 제약조건](https://www.notion.so/MySQL-17ea00321d9880988d2bdb8eac500b02?pvs=4)
+- [SQL 고급](https://www.notion.so/SQL-17ea00321d9880399bf4dff87ee056a3?pvs=4)
+- [데이터 모델링](https://www.notion.so/17ea00321d9880d8a6cde173a6414c43?pvs=4)
 
 ### 💙
 
