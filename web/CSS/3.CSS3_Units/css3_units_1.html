@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 단위 1</title>
+
+    <style>
+        /* 키워드 : 각 속성마다 미리 지정된 값 */
+        .keyword {
+            color: aquamarine;
+            font-weight: bold;
+        }
+
+        /* 크기 단위 */
+        
+        /* 
+        px : 
+            - 픽셀 단위 1px 화소 1개를 의미
+            - 디바이스 별로 픽셀의 크기가 다르기 때문에 1/96 인치 크기의 절대 단위로 인식
+            - 최종 요소의 크기나 이미지의 크기에 많이 사용됨
+        */
+        .pixel {
+            font-size: 12px;
+            width: 200px;
+            height: 400px;
+
+            background-color: rgba(255, 0, 0, 0.4);
+        }
+
+        /*
+        % :
+            - 백분율 단위의 상대 단위
+            - 요소의 지정된 사이즈 (부모 혹은 상속된 크기)에 대하여 상대적인 사이즈를 지정
+        */
+        .percentage {
+            background-color: burlywood;
+            height: 40%;
+        }
+
+        /*
+        em :
+            - 배수 단위로 상대 단위
+            - 요소에 지정된 사이즈 (부모 혹은 상속된 크기)에 대하여 상대적인 사이즈를 지정
+            - 1em 사이즈는 부모 요소의 사이즈와 동일, 2em 사이즈는 부모 요소 사이즈의 2배
+            - 글꼴 사이즈에 자주 사용
+        */
+        .em {
+            font-size: 3em;
+        }
+
+        /*
+        rem :
+            - 배수 단위로 상대 단위
+            - 최상위 요소(html)의 사이즈를 기준으로 상대적 사이즈를 결정
+            - 1rem은 html 기본 크기의 1배, 2rem은 html 기본 크기의 2배
+            - 글꼴에 자주 사용됨
+            - wrapper에 자주 사용됨
+        */
+        .rem {
+            font-size: 3rem;
+        }
+
+        /* 
+        viewport 단위 (vh, vw)
+            - 반응형 웹 디자인시 화면의 크기에 따라 동적으로 대응되는 단위, % 부모 요소의 영향을 받기 때문에 이에 대응하기 위해 사용
+            - viewport 기준 상대적 크기
+        */
+        .viewport {
+            width: 50vw;
+            height: 50vw;
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="keyword">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div class="pixel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+    <hr />
+
+    <div style="height: 500px; background-color: cadetblue;">
+        <div class="percentage">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+    <hr />
+
+    <div>
+        <p class="em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div style="font-size: 4px;">
+        <p class="em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <hr />
+
+    <div>
+        <p class="rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div style="font-size: 4px;">
+        <p class="rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <hr />
+
+    <div class="viewport">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+</body>
+</html>

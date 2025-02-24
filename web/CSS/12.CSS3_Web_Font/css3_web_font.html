@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 웹 폰트</title>
+
+    <style>
+
+        /* 눈누 : https://noonnu.cc/ */
+        /* 구글 폰트 : https://fonts.google.com/?subset=korean&noto.script=Kore */
+
+        /*
+            CDN 링크 방식 : @import 방식으로 웹 폰트 다운로드 받아 사용
+        */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+        .nanum-gothic {
+            font-family: "Nanum Gothic", serif;
+            font-style: normal;
+        }
+
+
+        /*
+            서버 폰트 로딩 방식 : @font-face 방식으로 웹 폰트를 등록해서 사용
+        */
+        @font-face {
+            font-family: 'P';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'M';
+            src: url('./Maplestory.otf');
+        }
+
+        .pretendard {
+            font-family: 'P';
+        }
+
+        h2 {
+            font-family: 'M';
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2 class="nanum-gothic">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2 class="pretendard">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+</body>
+</html>
